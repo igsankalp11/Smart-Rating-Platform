@@ -31,7 +31,7 @@ class Rating(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     rating = db.Column(db.Integer, nullable=False)
 
-# Routes (rest of the code remains the same as before)
+# Routes
 @app.route('/')
 def index():
     if 'user_id' in session:
